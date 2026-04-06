@@ -1,0 +1,30 @@
+body{
+    background-color: #b7ff0042;
+}
+
+h1,h2,h3,p{
+
+    font-family: Verdana;
+    color:darkblue;
+
+}
+
+.whitewine{
+    color: #FFBB00;
+}
+.redwine{
+    color: #800000;
+}
+#branco{
+    background-color: #FFBB00;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+}
+#tinto{
+    background-color: #800000;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20pt;
+}
+.benefit{
+    font-weight: bolder;
+}
