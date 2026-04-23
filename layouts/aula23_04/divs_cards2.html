@@ -8,16 +8,17 @@
     <style>
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
             display: flex;
             justify-content: center;
-            /* horizontal */
-            align-items: center;
-            /* vertical */
-            height: 100vh;
-            /* altura da tela */
+            align-items: flex-start;
+            /* começa do topo */
+            min-height: 100vh;
+            padding: 20px 0;
         }
 
         main {
@@ -25,7 +26,7 @@
             border: 1px solid black;
             width: 95%;
             max-width: 900px;
-            margin: 0 auto;
+            margin: 20px auto;
         }
 
         header,
@@ -84,16 +85,20 @@
             text-align: justify;
         }
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 900px) {
             article {
                 flex-direction: column;
-                 align-items: center;
+                align-items: center;
 
             }
 
             .card {
                 width: 90%;
 
+            }
+
+            .card:hover {
+                transform: none;
             }
         }
     </style>
