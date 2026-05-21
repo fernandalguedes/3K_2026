@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Criar um botão que mostre seu nome. 
+        Fazer uma soma de dois números. 
+        Criar uma função que mostre “Bom dia”. 
+        Ler idade com prompt().
+    -->
+    Nome:<input type="text" id="n">
+    <p id="nome"></p>
+    <button id="mostra" onclick="mostrarNome()">Mostrar nome</button>
+
+    <br>
+    Número 1: <input type="number" id="n1">
+    Número 2: <input type="number" id="n2">
+    <button onclick="somar()"> Somar </button>
+    <p id="resultado"></p>
+
+    <br>
+    <button id="bd" onclick="mostraMsg()"> Mostra Bom dia</button>
+
+    <br>
+    <script>
+        let idade=prompt("Informe sua idade:");
+        alert("Idade:"+ idade);
+    </script>
+
+    <script src="../JS/script.js">
+    </script>
+</body>
+</html>
