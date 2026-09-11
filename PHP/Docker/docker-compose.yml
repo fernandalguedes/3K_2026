@@ -1,0 +1,32 @@
+services:
+
+  #servidor
+  servidor:
+
+    # Imagem oficial contendo PHP 8.3 e Apache
+    #image: php:8.3-apache
+    build:
+      context: .
+      dockerfile: Dockerfile
+    
+    container_name: php-apache
+
+    ports:
+      - "80:80"
+
+    volumes:
+      - ./www:/var/www/html
+      # Injeta a configuração do Apache diretamente por comando ao iniciar
+    command: >
+      bash -c "
+      echo '<Directory /var/www/html>
+          Options Indexes FollowSymLinks
+          AllowOverride All
+          Require all granted
+      </Directory>' > /etc/apache2/conf-available/open-folder.conf
+      && a2enconf open-folder
+      && apache2-foreground
+      "
+     
+
+ 
